@@ -148,11 +148,11 @@ int main()
         snprintf( str_d, length_d + 1, "%5.2f", DewPoint );
 
 		//publish temperature under topic SHT21/Temperature
-		mosquitto_publish(mosq, NULL, "home/SHT21/Temperature", length_t, str_t, 0, false);
+		mosquitto_publish(mosq, NULL, "SHT21/Temperature", length_t, str_t, 0, false);
 		//publish Humidity under topic SHT21/Humidity
-		mosquitto_publish(mosq, NULL, "home/SHT21/Humidity", length_h, str_h, 0, false);
+		mosquitto_publish(mosq, NULL, "SHT21/Humidity", length_h, str_h, 0, false);
 		//publish Dew point under topic SHT21/DewPoint
-		mosquitto_publish(mosq, NULL, "home/SHT21/DewPoint", length_d, str_d, 0, false);
+		mosquitto_publish(mosq, NULL, "SHT21/DewPoint", length_d, str_d, 0, false);
 		
 		free(str_d);
 		free(str_t);
