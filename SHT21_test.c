@@ -120,7 +120,7 @@ int main()
 		int length_d_1 = snprintf( NULL, 0, "%5.2f", DewPoint );
         char* str_d1 = malloc( length_d + 1 );
         snprintf( str_d, length_d + 1, "%5.2f", DewPoint );
-        mosquitto_publish(mosq, NULL, "home/SHT21/Dewpoint/Outside", length_d_1, str_d1, 0, false);
+        mosquitto_publish(mosq, NULL, "SHT21/Dewpoint/Outside", length_d_1, str_d1, 0, false);
         free(str_d1);
 		
 		TCA9548A(1);
