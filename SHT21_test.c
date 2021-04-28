@@ -61,7 +61,7 @@ int main ()
         mosq = mosquitto_new("Publisher-test", true, NULL);
 
 	//setup connection to broker at this IP address, port 1883, with 60 second timeout
-        rc = mosquitto_connect(mosq, "192.168.1.19", 1883, 60);
+        rc = mosquitto_connect(mosq, "localhost", 1883, 60);
 
 	//if connection is not successful, print error message and abort program
         if (rc != 0)
